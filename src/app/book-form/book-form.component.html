@@ -1,0 +1,47 @@
+<h1 style="text-align: center;">Book Details</h1>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" >
+    <div>
+      <label for="bookName">Book Name:</label><br>
+      <input type="text" id="bookName" formControlName="bookName">
+    </div>
+    
+    <div>
+      <label for="author">Author:</label><br>
+      <input type="text" id="author" formControlName="author">
+    </div>
+    
+    <div>
+      <label for="publication">Publication:</label><br>
+      <input type="text" id="publication" formControlName="publication">
+    </div>
+    
+    <div>
+      <label for="price">Price:</label><br>
+      <input type="number" id="price" formControlName="price">
+    </div>
+    
+    <div>
+      <label for="genre">Genre:</label><br>
+      <input type="text" id="genre" formControlName="genre">
+    </div>
+    
+    <div>
+      <label for="publishedDate">Published Date:</label><br>
+      <input type="date" id="publishedDate" formControlName="publishedDate">
+    </div>
+    
+    <div>
+      <label for="country">Country:</label><br>
+      <input type="text" id="country" formControlName="country">
+    </div>
+    
+    <div>
+      <label for="description">Description:</label><br>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+  
+    <div>
+      <button type="submit" [disabled]="!bookForm.valid">Submit</button>
+    </div>
+  </form>
+  
