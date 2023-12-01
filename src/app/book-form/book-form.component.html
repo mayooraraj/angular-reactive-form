@@ -1,5 +1,5 @@
 <h1 style="text-align: center;">Book Details</h1>
-<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" >
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="bookName">Book Name:</label><br>
       <input type="text" id="bookName" formControlName="bookName">
@@ -43,5 +43,15 @@
     <div>
       <button type="submit" [disabled]="!bookForm.valid">Submit</button>
     </div>
+  
   </form>
+
+  <!-- Display status and response -->
+<div *ngIf="statusMessage">
+  <p>Status: {{ statusMessage }}</p>
+</div>
+
+<div *ngIf="responseData">
+  <p>Response: {{ responseData | json }}</p>
+</div>
   
